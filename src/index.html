@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117162422-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-117162422-1');
-  </script>
-
-
-
   <title>Hayley & Oliver</title>
 
   <meta charset="utf-8">
@@ -22,23 +9,25 @@
   <meta property="og:url" content="http://hayleyandoliver.com" />
   <meta property="og:description" content="The wedding of Hayley and Oliver" />
   <meta property="og:image" content="http://mayaandkeshal.com/images/c-3-color.jpg" />
-  <!--<meta property="fb:admins" content="prit4k" />-->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <meta name="description" content="The wedding of Hayley and Oliver" />
   <meta name="keywords" content="Wedding, Kiwi, New Zealand, Christchurch, Marriage, Wife, Husband">
   <meta name="author" content="Hayley Mapley">
 
-
-  <!--[htmlclean-protect]-->
-  <!-- inject:css -->
-  <!-- endinject -->
-  <!--[/htmlclean-protect]-->
-  <!--<Deject>-->
+  <!--Stylesheets-->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/animate.css">
-  <!--</Deject>-->
+  <link rel="stylesheet" href="css/jquery-sakura.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+
+  <!--JQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 
@@ -75,7 +64,7 @@
             <strong>Schedule</strong>
           </a>
           <a class="navbar-item" href="travel.html">
-            <strong>Travel & Accomodations</strong>
+            <strong>Location</strong>
           </a>
           <a class="navbar-item" href="rsvp.html">
             <strong>RSVP</strong>
@@ -92,21 +81,101 @@
   </nav>
 
   <section id="main" class="hero is-fullheight animated fadeIn">
+    <div class="overlay1 size1 flex-w flex-c-m p-t-55 p-b-55 p-l-15 p-r-15">
+    <div class="wsize1">
+      <!--<p class="txt-center p-b-23">
+        <i class="zmdi zmdi-card-giftcard cl0 fs-60"></i>
+      </p>-->
+      
+      <h3 class="l1-txt1 txt-center p-b-22">
+        Hayley & Oliver
+      </h3>
+
+      <p class="txt-center m2-txt1 p-b-67">
+        Not long now until we become husband and wife!
+      </p>
+
+      <div class="flex-w flex-sa-m cd100 bor1 p-t-42 p-b-22 p-l-50 p-r-50 respon1">
+        <div class="flex-col-c-m wsize2 m-b-20">
+          <span id="days" class="l1-txt2 p-b-4 days"></span>
+        <span class="m2-txt2">Days</span>
+      </div>
+
+      <span class="l1-txt2 p-b-22">:</span>
+
+      <div class="flex-col-c-m wsize2 m-b-20">
+        <span id="hours" class="l1-txt2 p-b-4 hours"></span>
+        <span class="m2-txt2">Hours</span>
+      </div>
+
+      <span class="l1-txt2 p-b-22 respon2">:</span>
+
+      <div class="flex-col-c-m wsize2 m-b-20">
+        <span id="minutes" class="l1-txt2 p-b-4 minutes"></span>
+        <span class="m2-txt2">Minutes</span>
+      </div>
+
+      <span class="l1-txt2 p-b-22">:</span>
+
+      <div class="flex-col-c-m wsize2 m-b-20">
+        <span id="seconds" class="l1-txt2 p-b-4 seconds"></span>
+        <span class="m2-txt2">Seconds</span>
+      </div>
+    </div>
+    </div>
+    </div>
   </section>
 
-  <!--<Deject>-->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+  <!--Scripts-->
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <script src="js/scroll-animations.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/quiz.js"></script>
   <script src="js/pace.js"></script>
-  <!--</Deject>-->
-  <!--[htmlclean-protect]-->
-  <!-- inject:js -->
-  <!-- endinject -->
-  <!--[/htmlclean-protect]-->
+  <script src="js/jquery-sakura.min.js"></script>
+  <script>
+    $(function() {
+        $.fn.sakura();
+    });
+    var days_html = document.getElementById("days");
+    var hours_html = document.getElementById("hours");
+    var minutes_html = document.getElementById("minutes");
+    var seconds_html = document.getElementById("seconds");
+    function countdown(timePart) {
+      var return_string = "";
+      var today = new Date();
+      var weddingDate = new Date('November 13, 2019 15:00');
+      var ms = weddingDate - today;
+      /*if (ms > 0) {*/
+        var d = ms / (1000 * 60 * 60 * 24) | 0;
+        var h = ms % (1000 * 60 * 60 * 24) / (1000 * 60 * 60) | 0;
+        var m = ms % (1000 * 60 * 60) / (1000 * 60) | 0;
+        var s = ms % (1000 * 60) / (1000) | 0;
+        var timeParts = [d, h, m, s];
+        var timeStringParts = new Array();
+      /*}*/
+      switch (timePart) {
+        case 0:
+          return_string = timeParts[0];
+          break;
+        case 1:
+	  return_string = timeParts[1];
+	  break;
+        case 2:
+          return_string = timeParts[2];
+          break;
+        case 3:
+          return_string = timeParts[3];
+          break;
+      }
+      return return_string;
+    }
+    setInterval(function() {
+      days_html.innerHTML = countdown(0);
+      hours_html.innerHTML = countdown(1);
+      minutes_html.innerHTML = countdown(2);
+      seconds_html.innerHTML = countdown(3);
+    }, 1000);
+  </script>
 </body>
-
 </html>

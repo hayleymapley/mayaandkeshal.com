@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>H&O - RSVP</title>
+
+  <meta charset="utf-8">
+  <meta property="og:title" content="Hayley & Oliver" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://hayleyandoliver.com/rsvp.html" />
+  <meta property="og:description" content="The wedding of Hayley and Oliver" />
+  <meta property="og:image" content="http://mayaandkeshal.com/images/c-3-color.jpg" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="The wedding of Hayley and Oliver" />
+  <meta name="keywords" content="Wedding, Kiwi, New Zealand, Christchurch, Marriage, Wife, Husband">
+  <meta name="author" content="Hayley Mapley">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body>
+  <div id="registry-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content animated bounceIn">
+      <div class="notification is-link">
+        <button id="modal-close" class="delete"></button>
+        Your presence is present enough. Seriously. But for the stubborn among you,
+        we ask that you consider contributing to these charities, or if you cannot
+        bear not giving to us, contributing to our honeymoon fund!
+      </div>
+    </div>
+  </div>
+  <nav id="global-nav" class="navbar is-fixed-top is-transparent">
+    <div class="container">
+      <div class="navbar-brand">
+        <a id="logo" class="navbar-item" href="index.html">
+          <strong class="logo">Hayley & Oliver</strong>
+        </a>
+        <div id="nav-toggle" class="navbar-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="main-menu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="couple.html">
+            <strong>Our story</strong>
+          </a>
+          <a class="navbar-item" href="schedule.html">
+            <strong>Schedule</strong>
+          </a>
+          <a class="navbar-item" href="travel.html">
+            <strong>Location</strong>
+          </a>
+          <a class="navbar-item is-active" href="rsvp.html">
+            <strong class="tag is-size-6 is-link">RSVP</strong>
+          </a>
+          <a class="navbar-item" id="registry-click">
+            <strong>Registry</strong>
+          </a>
+          <a class="navbar-item" href="faq.html">
+            <strong>FAQs</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="rsvp" class="hero section is-fullheight">
+    <div class="columns is-centered">
+      <div class="column is-6">
+        <br>
+        <br class="is-hidden-mobile">
+        <br class="is-hidden-mobile">
+        <br class="is-hidden-mobile">
+        <span class="is-size-2 rsvp-label-2">
+          <strong id="rsvp-title">Say You'll Be There!</strong>
+        </span>
+        <br>
+        <br>
+
+        <div id="rsvp-box" class="box">
+          <div id="rsvp-initial">
+            <div class="field">
+              <label class="label is-medium">Give us some details</label>
+              <div class="control">
+                <input id="email-input" class="input is-medium" type="text" placeholder="Email address">
+              </div>
+              <p id="help-message" class="help">Enter the email address that your invitation was sent to</p>
+              <div class="field">
+                <p class="control">
+                  <button id="check-email" onclick="checkEmail()" class="button is-link is-medium">
+                    Continue
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!--<Deject>-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script src="js/scroll-animations.js"></script>
+  <script src="js/rsvp.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/pace.js"></script>
+  <!--</Deject>-->
+  <!--[htmlclean-protect]-->
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!--[/htmlclean-protect]-->
+</body>
+
+</html>

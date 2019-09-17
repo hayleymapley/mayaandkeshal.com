@@ -1,15 +1,15 @@
 var counter = 0;
 var right = 0;
 var questions = [
-    ["Where did Maya and Keshal meet?", "Spring break, Miami - cliché, we know", "At Columbia University, obviously", "Through a friend who set them up - Hi, Friend! You know who you are ;)", "In the one Anthropology class Keshal took while at Columbia. It was called 'Magic, Witchcraft and Religion'. He thought it 'sounded cool'.", "1"],
-    ["How long have they been together?", "6 years", "7 years", "8 years", "An eternity. Seriously, what took them so long?", "4"],
-    ["How long were they in a long distance relationship?", "They were in a long distance relationship??", "3 years", "4 years", "5 years", "4"],
-    ["Where did they get engaged?", "Miami, Florida - where it all began", "Lisbon, Portugal - Maya thought it was a vacation with Keshal's family", "Boston, Massachusetts - on a random Sunday, with Otis Redding on the record player, over brunch", "New York City, New York - it was a full on flash mob", "2"],
-    ["Who is the bride-zilla between the two?", "Keshal", "Maya", "1"],
-    ["What is their preferred term of endearment?", "Boo", "Babe", "Hon", "Dear", "1"],
-    ["Which of these is a nickname Maya has for Keshal?", "Schmoomoo", "Boo Radley", "KP", "Keshal Facial", "All of the above", "5"],
-    ["Which of these is a nickname Keshal has for Maya? ", "Clown", "Ma", "Booface", "Garfield", "All of the above", "5"],
-    ["Over the years, Maya and Keshal have had a lot of adventures together. What <i>haven't</i> they done together?", "Climbed a volcano", "Scuba dived in fresh water caves", "Taken a woodworking class", "Gone to a music festival", "All of the above", "3"]
+    ["Where did Hayley and Oliver meet?", "Working at your One Stop Gift Shop - Whitcoulls", "At Victoria University of Wellington, obviously", "Through a friend who set them up", "They both swiped right on Tinder", "1"],
+    ["How long have they been together?", "1 year", "2 years", "3 years", "100 YEARS", "2"],
+    ["Who asked out the other person on a date first?", "He did - smooth guy", "She did - bold move", "They didn't have a first date... technically", "Their first date was an accident - a good one though", "1"],
+    ["Where did they get engaged?", "In front of a bookshelf at Whitcoulls - where it all began", "Mount Victoria - Hayley thought they were just going for a walk", "In their tiny studio - on a random Sunday, with Jack White on the Google Home, over brunch", "Maruia Hot Springs - rainy but gorgeous and oh so picturesque", "4"],
+    ["Who spends more money on gadgets?", "Hayley - robot vacuum, Google Home, just to name a few", "They're very frugal, and don't spend much on anything!", "Oliver - PlayStation 4, Macbook, need we say more?", "They're both as bad as each other", "4"],
+    ["What is their preferred term of endearment?", "Sweetheart", "My love", "Baby", "All of the above", "4"],
+    ["Who enjoys hot springs more?", "Oliver", "Hayley", "They both love them equally", "Are you kidding? They HATE hot springs!", "2"],
+    ["What do the couple do in their free time together? ", "Watch Netflix", "Eat vegan snacks", "Co-habitate", "All of the above", "4"],
+    ["Over the years, Hayley and Oliver have had a lot of adventures together. What <i>haven't</i> they done together?", "Tramped up Lewis Pass", "Attended a yoga class", "Gone on a treasure hunt with shots at every stop", "Completed a Master degree", "2"]
 ];
 
 $(document).ready(function () {
@@ -38,13 +38,13 @@ $(document).ready(function () {
                     var result = $("<div id='question' class='field is-size-4'><strong class='has-text-success'>You got all " + right +"/9 right.</strong></br><div class='is-size-5'> Wow! You got them all right! There's no way you're not a stalker. Not that you need it, but scroll down to read the full story!</div></div>").hide();
                 }
                 else if (right >= 7){
-                    var result = $("<div id='question' class='field is-size-4'><strong class='has-text-success'>You got " + right +"/9 right.</strong></br><div class='is-size-5'> Pretty good! You must be quite close to Maya and Keshal... or you're a stalker. Scroll down for the full story!</div></div>").hide();
+                    var result = $("<div id='question' class='field is-size-4'><strong class='has-text-success'>You got " + right +"/9 right.</strong></br><div class='is-size-5'> Pretty good! You must be quite close to Hayley and Oliver... or you're a stalker. Scroll down for the full story!</div></div>").hide();
                 }
                 else if (right < 7 && right >= 3){
                     var result = $("<div id='question' class='field is-size-4'><strong class='orange'>You got " + right +"/9 right.</strong></br><div class='is-size-5'> You've got some work to do! Scroll down and read up...</div></div>").hide();
                 }
                 else {
-                    var result = $("<div id='question' class='field is-size-4'><strong class='has-text-danger'>You got " + right +"/9 right.</strong></br><div class='is-size-5'> Wow you did terribly! Do you even know Maya and Keshal!? Scroll down and take notes...</div></div>").hide();
+                    var result = $("<div id='question' class='field is-size-4'><strong class='has-text-danger'>You got " + right +"/9 right.</strong></br><div class='is-size-5'> Wow, you did terribly! Do you even know Hayley and Oliver!? Scroll down and take notes...</div></div>").hide();
                 }
                 $('#couple-20').replaceWith('<div id="couple-20" class="column is-4 is-offset-1"><p class="title is-2 "><span class="rsvp-label">Your Results</span></p></div>');
                 $('#question').replaceWith(result);

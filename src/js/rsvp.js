@@ -1,5 +1,3 @@
-var Airtable = require('airtable');
-var base = new Airtable({ apiKey: 'API_KEY_HERE' }).base('BASE_KEY_HERE');
 var id, names, invites, rsvpNum, updatedNames;
 var emailInput = document.getElementById("email-input");
 
@@ -24,7 +22,7 @@ function endSuccess() {
 }
 
 function submit() {
-    document.getElementById("submit").classList.add("is-loading");
+    /*document.getElementById("submit").classList.add("is-loading");
     if (rsvpNum == 0) {
         base('RSVPs').update(id, {
             "RSVP'd?": true,
@@ -51,7 +49,7 @@ function submit() {
             if (err) { endError(); return; }
             endSuccess();
         });
-    }
+    }*/
 }
 
 function enterNames(selected) {
@@ -143,38 +141,9 @@ function validateEmail(email) {
 function checkEmail() {
     document.getElementById("check-email").classList.add("is-loading");
     if (validateEmail(emailInput.value)) {
-        base('RSVPs').select({
-            filterByFormula: 'FIND("' + emailInput.value.toLowerCase() + '", Email)',
-        }).eachPage(function page(records, fetchNextPage) {
-
-            records.forEach(function (record) {
-                id = record.id;
-                rsvpNum = record.get('# of RSVPs');
-                updatedNames = record.get("RSVP'd Names");                
-                names = record.get('Formal Name Addresses');
-                if (names == undefined) {
-                    names = record.get("Names");
-                }
-                invites = record.get('# of Invites');
-            });
-
-            fetchNextPage();
-
-        }, function done(err) {
-            if (names != null) {
-                if (rsvpNum != undefined) { alreadyRSVPed(); }
-                else { selectNumberPeople(); }
-                return;
-            }
-            if (names == null) {
-                document.getElementById("check-email").classList.remove("is-loading");
-                document.getElementById("email-input").classList.add("is-danger");
-                $("#help-message").replaceWith("<p id='help-message' class='help is-danger animated shake'>That email address wasn't found on our list. Please try another email or contact us directly to RSVP.</p>")
-                return;
-            }
-            if (err) { endError(); return; }
-        });
-
+      console.log("Email validated");
+      document.getElementById("check-email").classList.remove("is-loading");
+      location.href = "submit-rsvp.html";
     }
     else {
         document.getElementById("check-email").classList.remove("is-loading");
