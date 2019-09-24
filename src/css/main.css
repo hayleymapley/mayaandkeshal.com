@@ -1,3 +1,9 @@
+/*[ COLOUR ]*/
+/* Maroon= #701105 */
+/* Cream= #eadecb */
+/* Gold= #d9bd85 */
+/* Blush= #e3b3af */
+
 /*[ FONT ]*/
 
 @font-face {
@@ -84,7 +90,7 @@
 .bor1 {
   /*border: 2px solid rgba(0,0,0,0.35);*/
   /*border: 2px solid rgba(212,175,55,0.35);*/
-  border: 2px solid rgba(139, 29, 29, 0.35);
+  border: 2px solid rgba(227, 179, 175, 0.35);
 }
 
 /*[ OVERLAY ]*/

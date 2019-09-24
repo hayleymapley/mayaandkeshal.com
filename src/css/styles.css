@@ -1,3 +1,9 @@
+/*[ COLOUR ]*/
+/* Maroon= #701105 */
+/* Cream= #eadecb */
+/* Gold= #d9bd85 */
+/* Blush= #e3b3af */
+
 * {
   -webkit-overflow-scrolling: touch;
   -webkit-font-smoothing: antialiased;
@@ -116,7 +122,7 @@ html, body {
 .logo {
   /*color: #196622; dark emerald*/
  /*color: #D4AF37; gold */
-  color: #8B1D1D;
+  color: #701105;
 }
 
 .column-couple-text {
@@ -207,12 +213,12 @@ p {
 
 .rsvp-label {
   position: relative;
-  z-index: 1000;
+  /*z-index: 1000;*/
 }
 
 .rsvp-label:after {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(60%, transparent), color-stop(60%, #F4C2C2), color-stop(88%, #F4C2C2), color-stop(88%, transparent));
-  background: linear-gradient(to bottom, transparent 0%, transparent 60%, #F4C2C2 60%, #F4C2C2 88%, transparent 88%);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(60%, transparent), color-stop(60%, #e3b3af), color-stop(88%, #e3b3af), color-stop(88%, transparent));
+  background: linear-gradient(to bottom, transparent 0%, transparent 60%, #e3b3af 60%, #e3b3af 88%, transparent 88%);
   content: '';
   z-index: -1000;
   position: absolute;
@@ -223,8 +229,8 @@ p {
 }
 
 .rsvp-label-2 {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(55%, transparent), color-stop(55%, #F4C2C2), color-stop(90%, #F4C2C2), color-stop(90%, transparent));
-  background: linear-gradient(to bottom, transparent 0%, transparent 55%, #F4C2C2 55%, #F4C2C2 90%, transparent 90%);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(55%, transparent), color-stop(55%, #e3b3af), color-stop(90%, #e3b3af), color-stop(90%, transparent));
+  background: linear-gradient(to bottom, transparent 0%, transparent 55%, #e3b3af 55%, #e3b3af 90%, transparent 90%);
 }
 
 .subtitle {
@@ -446,7 +452,7 @@ pre {
 }
 
 body {
-  color: #4a4a4a;
+  color: #363636;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4858,7 +4864,7 @@ a.box:active {
 }
 
 .notification.is-link {
-  background-color: #8B1D1D;
+  background-color: #701105;
   color: #fff;
 }
 
@@ -4903,15 +4909,15 @@ a.box:active {
 }
 
 .progress::-webkit-progress-value {
-  background-color: #4a4a4a;
+  background-color: #e3b3af;
 }
 
 .progress::-moz-progress-bar {
-  background-color: #4a4a4a;
+  background-color: #e3b3af;
 }
 
 .progress::-ms-fill {
-  background-color: #4a4a4a;
+  background-color: #e3b3af;
   border: none;
 }
 
@@ -4984,7 +4990,7 @@ a.box:active {
 }
 
 .progress.is-link::-ms-fill {
-  background-color: #F4C2C2;
+  background-color: #e3b3af;
 }
 
 .progress.is-info::-webkit-progress-value {
@@ -7059,7 +7065,7 @@ a.dropdown-item.is-active {
   }
   .navbar.is-link .navbar-item.has-dropdown:hover .navbar-link,
   .navbar.is-link .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: #D4AF37;
+    background-color: #d9bd85;
     color: #fff;
   }
   .navbar.is-link .navbar-dropdown a.navbar-item.is-active {
