@@ -2,10 +2,10 @@ var counter = 0;
 var right = 0;
 var questions = [
     ["Where did Hayley and Oliver meet?", "Working at your One Stop Gift Shop - Whitcoulls", "At Victoria University of Wellington, obviously", "Through a friend who set them up", "They both swiped right on Tinder", "1"],
-    ["How long have they been together?", "1 year", "2 years", "3 years", "100 YEARS", "2"],
+    ["How long have they been together?", "1 year", "2 years", "3 years", "100 YEARS", "3"],
     ["Who asked out the other person on a date first?", "He did - smooth guy", "She did - bold move", "They didn't have a first date... technically", "Their first date was an accident - a good one though", "1"],
     ["Where did they get engaged?", "In front of a bookshelf at Whitcoulls - where it all began", "Mount Victoria - Hayley thought they were just going for a walk", "In their tiny studio - on a random Sunday, with Jack White on the Google Home, over brunch", "Maruia Hot Springs - rainy but gorgeous and oh so picturesque", "4"],
-    ["Who spends more money on gadgets?", "Hayley - robot vacuum, Google Home, just to name a few", "They're very frugal, and don't spend much on anything!", "Oliver - PlayStation 4, Macbook, need we say more?", "They're both as bad as each other", "4"],
+    ["Who spends more money on gadgets?", "Hayley - robot vacuum, Google Home, breadmaker, just to name a few", "They're very frugal, and don't spend much on anything!", "Oliver - PlayStation 4, Macbook, need we say more?", "They're both as bad as each other", "4"],
     ["What is their preferred term of endearment?", "Sweetheart", "My love", "Baby", "All of the above", "4"],
     ["Who enjoys hot springs more?", "Oliver", "Hayley", "They both love them equally", "Are you kidding? They HATE hot springs!", "2"],
     ["What do the couple do in their free time together? ", "Watch Netflix", "Eat vegan snacks", "Co-habitate", "All of the above", "4"],
